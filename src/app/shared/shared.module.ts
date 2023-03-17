@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule],
-  exports: [MaterialModule, ReactiveFormsModule, HttpClientModule],
+  declarations: [CommentComponent],
+  imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule],
+  exports: [
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    CommentComponent,
+  ],
 })
 export class SharedModule {}
